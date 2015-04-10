@@ -1,11 +1,13 @@
 package neamar.fr.thequietmind;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import neamar.fr.thequietmind.db.NotificationDisplayedDbHelper;
+import neamar.fr.thequietmind.services.NotificationListener;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -16,6 +18,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         NotificationDisplayedDbHelper notificationDisplayedDbHelper = new NotificationDisplayedDbHelper(this);
+
+        Intent intent = new Intent(this ,NotificationListener.class);
+        startService(intent);
     }
 
     @Override

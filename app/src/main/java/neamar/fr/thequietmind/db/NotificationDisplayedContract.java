@@ -16,5 +16,8 @@ public class NotificationDisplayedContract {
         public static final String COLUMN_NAME_ENTRY_ID = "id";
         public static final String COLUMN_NAME_PACKAGE = "package";
         public static final String COLUMN_NAME_DATE = "date";
+        public static final String COLUMN_NAME_HOUR = "hour";
+        public static final String COLUMN_NAME_DAY = "day";
+
     }
 }

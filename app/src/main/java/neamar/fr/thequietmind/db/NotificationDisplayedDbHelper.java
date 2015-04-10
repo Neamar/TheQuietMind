@@ -10,12 +10,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class NotificationDisplayedDbHelper extends SQLiteOpenHelper {
 
     private static final String TEXT_TYPE = " TEXT";
+    private static final String INTEGER_TYPE = " INTEGER";
     private static final String COMMA_SEP = ",";
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + NotificationDisplayedContract.NotificationDisplayedEntry.TABLE_NAME + " (" +
                     NotificationDisplayedContract.NotificationDisplayedEntry._ID + " INTEGER PRIMARY KEY," +
                     NotificationDisplayedContract.NotificationDisplayedEntry.COLUMN_NAME_PACKAGE + TEXT_TYPE + COMMA_SEP +
-                    NotificationDisplayedContract.NotificationDisplayedEntry.COLUMN_NAME_DATE + TEXT_TYPE + COMMA_SEP +
+                    NotificationDisplayedContract.NotificationDisplayedEntry.COLUMN_NAME_DATE + INTEGER_TYPE + COMMA_SEP +
+                    NotificationDisplayedContract.NotificationDisplayedEntry.COLUMN_NAME_HOUR + INTEGER_TYPE + COMMA_SEP +
+                    NotificationDisplayedContract.NotificationDisplayedEntry.COLUMN_NAME_DAY + INTEGER_TYPE +
                     " )";
 
     // If you change the database schema, you must increment the database version.
